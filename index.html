@@ -2,14 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=https://fastkitchendesign.com" />
-  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fast Kitchen Design - Redirecting</title>
+
+  <!-- FKD Metadata for SEO -->
+  <meta name="description" content="Fast Kitchen Design (FKD) offers expert kitchen, bath, and laundry room design services with fast turnaround and stunning 3D renders." />
+  <meta name="keywords" content="Kitchen Design, Bathroom Design, 3D Renders, Fast Turnaround, FKD" />
+  <meta name="author" content="Fast Kitchen Design" />
+  <meta property="og:title" content="Fast Kitchen Design" />
+  <meta property="og:description" content="Expert kitchen, bath, and laundry room design services with fast turnaround and stunning 3D renders." />
+  <meta property="og:url" content="https://fastkitchendesign.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://fastkitchendesign.com/logo.png" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 1rem;
+      text-align: center;
+      color: #333;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #0070f3;
+    }
+    .logo {
+      max-width: 150px;
+      margin-bottom: 1.5rem;
+    }
+    .countdown {
+      font-weight: bold;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #d9534f;
+    }
+    a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
   <script>
-    // JavaScript fallback redirect
-    window.location.href = "https://fastkitchendesign.com";
+    let countdown = 5;
+    function redirectCountdown() {
+      const countdownElem = document.getElementById('countdown');
+      if (countdown > 0) {
+        countdownElem.textContent = countdown;
+        countdown--;
+        setTimeout(redirectCountdown, 1000);
+      } else {
+        window.location.href = "https://fastkitchendesign.com";
+      }
+    }
+    window.onload = redirectCountdown;
   </script>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="https://fastkitchendesign.com">click here</a>.</p>
+  <img src="/logo.png" alt="Fast Kitchen Design Logo" class="logo" />
+  <h1>Welcome to Fast Kitchen Design</h1>
+  <p>
+    We provide expert kitchen, bathroom, and laundry room design services with fast turnaround times and stunning 3D renderings.
+  </p>
+  <p>
+    You will be redirected to our main website shortly.
+  </p>
+  <p class="countdown">
+    Redirecting in <span id="countdown">5</span> seconds...
+  </p>
+  <p>
+    If you are not redirected automatically, please <a href="https://fastkitchendesign.com">click here</a>.
+  </p>
+  <footer style="margin-top: 3rem; font-size: 0.9rem; color: #777;">
+    &copy; 2025 Fast Kitchen Design. All rights reserved.
+  </footer>
 </body>
 </html>
